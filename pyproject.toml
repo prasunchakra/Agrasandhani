@@ -1,0 +1,45 @@
+[project]
+name = "agrasandhani"
+version = "0.1.0"
+description = "A focused CLI security scanner for web applications, aligned with OWASP Top 10 and WSTG methodology."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    { name = "Prasun Chakraborty", email = "you@example.com" }
+]
+dependencies = [
+    "typer[all]>=0.12.0",
+    "rich>=13.7.0",
+    "httpx[http2]>=0.27.0",
+    "playwright>=1.44.0",
+    "beautifulsoup4>=4.12.0",
+    "lxml>=5.2.0",
+    "pydantic>=2.7.0",
+    "pyyaml>=6.0.1",
+    "jinja2>=3.1.4",
+]
+
+[project.scripts]
+agrasandhani = "agrasandhani.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/agrasandhani"
+Repository = "https://github.com/yourusername/agrasandhani"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.2.0",
+    "pytest-asyncio>=0.23.0",
+    "mypy>=1.10.0",
+    "ruff>=0.4.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
